@@ -11,8 +11,32 @@
 </head>
 <body>
 
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div id="stage">
+                <div id="background"></div>
+                <div id="cannon"></div>
+                <div id="missile"></div>
+                <div id="alien"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <p id="output">
+                Enter the X and Y coordinates (0-300), then click fire!
+            </p>
+            <input id="inputX" type="number" min="0" max="300" placeholder="X..."/>
+            <input id="inputY" type="number" min="0" max="300" placeholder="Y..."/>
+            <button id="button">fire!</button>
+        </div>
+    </div>
+</div>
+
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script defer src="./gamescript.js"></script>
 </body>
 </html>
