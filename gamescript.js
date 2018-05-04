@@ -71,11 +71,45 @@
             }
         } else {
             renderMiss();
+
+            if (shotsRemaining < 1){
+                endGame();
+            }
         }
+
+        //update Alien position if game not won
+        if(!gameWon){
+            updateAlienPosition();
+        }
+
+        render();
     }
+
+    function updateAlienPosition(){
+        //update Alien C position
+        alienX = Math.floor(Math.random() * 280);
+
+        //add 30 to the new y position so that the alien moves closer to earth
+        alienY += 30;
+    }
+
 
     function renderMiss (){
         output.innerHTML = `Miss! ${gameState}`;
+    }
+
+
+    function endGame(){
+        if (gameWon){
+            output.innerHTML = `Hit! You saved the Earth! <br/>
+            It only took you ${shotsMade} shots!`;
+        } else {
+            output.innerHTML = `
+                You lost! <br/>
+                The Earth has been invaded!
+            
+            `;
+        }
     }
 
 
