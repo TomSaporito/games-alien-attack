@@ -1,0 +1,25 @@
+{
+  "name": "games-alien-attack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gamescript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomSaporito/games-alien-attack.git"
+  },
+  "author": "Tom Saporito <t.saporito@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TomSaporito/games-alien-attack/issues"
+  },
+  "homepage": "https://github.com/TomSaporito/games-alien-attack#readme",
+  "dependencies": {
+    "webpack": "4.8.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "2.1.3"
+  }
+}

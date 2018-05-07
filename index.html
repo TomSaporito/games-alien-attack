@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="src/style.css">
 <title>Alien Attack</title>
 </head>
 <body>
@@ -17,13 +17,13 @@
             <div id="stage">
                 <div id="background"></div>
                 <div id="cannon"></div>
-                <div id="missile"></div>
+                <div id="missile" class="miss"></div>
                 <div id="alien"></div>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center">
             <p id="output">
                 Enter the X and Y coordinates (0-300), then click fire!
             </p>
@@ -37,6 +37,6 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script defer src="./gamescript.js"></script>
+<script defer src="./dist/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,6 @@
-(function(){
+import * as util from './utils';
+
+export default function(){
 
     //Game variables
     var alienX = 80;
@@ -48,16 +50,37 @@
     }
 
     function clickHandler(){
-        playGame();
+        validateInput();
+    }
+
+    function validateInput(){
+        guessX = parseInt(inputX.value);
+        guessY = parseInt(inputY.value);
+
+        if (isNaN(guessX) || isNaN(guessY)) {
+            output.innerHTML = `Please enter a number!`;
+        } else if ( guessX > 300 || guessY > 300 || guessX < 0 || guessY < 0 ) {
+            output.innerHTML = `Please enter a value between 0 and 300`;
+        } else {
+            playGame();
+        }
+    }
+
+
+
+
+
+    function checkMissile(){
+        if (!missile.classList.contains('miss')){
+            missile.classList.add('explode');
+            alien.classList.add('dead');
+        }
     }
 
     function playGame(){
         shotsRemaining--;
         shotsMade++;
         gameState = `Shots: ${shotsMade}, Remaining: ${shotsRemaining}`;
-
-        guessX = parseInt(inputX.value);
-        guessY = parseInt(inputY.value);
 
         //find out if the players xand y guesses are in aliens area
         if (guessX >= alienX && guessX <= alienX + 20){
@@ -85,6 +108,8 @@
         render();
     }
 
+    util.addPrefixTrans(missile, checkMissile);
+
     function updateAlienPosition(){
         //update Alien C position
         alienX = Math.floor(Math.random() * 280);
@@ -101,8 +126,13 @@
 
     function endGame(){
         if (gameWon){
+            
+            missile.classList.remove('miss');
+            missile.classList.add('explode');
+
             output.innerHTML = `Hit! You saved the Earth! <br/>
             It only took you ${shotsMade} shots!`;
+           
         } else {
             output.innerHTML = `
                 You lost! <br/>
@@ -113,4 +143,4 @@
     }
 
 
-})();
+}
