@@ -1,3 +1,3 @@
-# Trust Bustin'
+# Mindless Consumer
 
-Blow up the major corporations before they enter the tiny community!
+Quickly! Purchase all the monopolistic products you can!
