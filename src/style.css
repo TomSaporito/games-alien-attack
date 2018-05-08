@@ -15,13 +15,15 @@
 }
 
 #cannon{
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 25px;
     position: absolute;
     top: 270px;
-    left: 140px;
-    background-image: url(../imgs/cannon.png);
+    left: 136px;
+    background-image: url(../imgs/fat/fat-sm.gif);
     transition: left 0.5s ease-out;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #alien{
